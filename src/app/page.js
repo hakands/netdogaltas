@@ -61,13 +61,13 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Büyük Hero Alanı (Giriş) - bg-white ile tamamen beyazlaştırıldı */}
+      {/* Büyük Hero Alanı (Giriş) */}
       <section className="hero-section text-center py-5 bg-white">
         <div className="container py-5 d-flex flex-column align-items-center justify-content-center">
           
-          {/* Yeni görsel tam ortada yer alıyor ve sağı solu beyaz */}
+          {/* Ortadaki görsel %50 oranında büyütüldü (maxHeight: 375px yapıldı) */}
           <div className="mb-4 w-100 text-center">
-            <img src="/hero.png" alt="Doğanın Zarafeti" className="img-fluid mx-auto" style={{ maxHeight: '250px', objectFit: 'contain' }} />
+            <img src="/hero.png" alt="Doğanın Zarafeti" className="img-fluid mx-auto" style={{ maxHeight: '375px', objectFit: 'contain' }} />
           </div>
 
           <a href="#urunler" className="btn btn-dark rounded-0 px-4 py-2 text-uppercase small mt-2" style={{ letterSpacing: '1px' }}>
@@ -106,13 +106,14 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="mt-4">
+                    {/* Buton rengi btn-success (Yeşil) olarak güncellendi */}
                     <a 
                       href={
                         lang === 'tr' 
                           ? `https://wa.me/905XXXXXXXXX?text=Merhaba,%20Net%20Doğaltaş%20sitenizdeki%20'${product.title_tr}'%20ürünü%20hakkında%20bilgi%20almak%20istiyorum.`
                           : `https://wa.me/905XXXXXXXXX?text=Hello,%20I%20would%20like%20to%20get%20information%20about%20the%20'${product.title_en}'%20product%20on%20your%20website.`
                       }
-                      className="btn btn-dark w-100 rounded-0" 
+                      className="btn btn-success w-100 rounded-0" 
                       target="_blank"
                       rel="noopener noreferrer"
                     >
