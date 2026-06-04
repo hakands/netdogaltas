@@ -153,8 +153,9 @@ export default function Home() {
             <div className="col-lg-3 col-md-6">
               <h6 className="fw-bold mb-3">{lang === 'tr' ? 'İletişim Bilgileri' : 'Contact Info'}</h6>
               <p className="text-muted small mb-2"><i className="bi bi-geo-alt me-2"></i> Denizli, Türkiye</p>
-              <p className="text-muted small mb-2"><i className="bi bi-telephone me-2"></i> +90 (5XX) XXX XX XX</p>
+              <p className="text-muted small mb-2"><i className="bi bi-telephone me-2"></i> +90 (533)253 96 04</p>
               <p className="text-muted small mb-2"><i className="bi bi-envelope me-2"></i> info@netdogaltas.com</p>
+               <p className="text-muted small mb-2"><i className="bi bi-envelope me-2"></i> netdogaltas@gmail.com</p>
             </div>
 
             {/* Google Haritalar */}
