@@ -61,31 +61,28 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Büyük Hero Alanı (Giriş) - Ortalanmış Video */}
-      <section className="hero-section py-5 bg-white">
-        <div className="container py-4 d-flex flex-column align-items-center justify-content-center">
-          
-          {/* Video Alanı */}
-          <div className="w-100 text-center mb-5">
-            <video 
-              autoPlay 
-              muted 
-              playsInline 
-              /* loop özelliği bilerek eklenmedi ki bitince son karesinde donsun */
-              className="w-100 rounded-3 shadow-lg" 
-              style={{ maxWidth: '1000px', maxHeight: '500px', objectFit: 'cover' }}
-            >
-              <source src="/hero-video.mp4" type="video/mp4" />
-              Tarayıcınız video oynatmayı desteklemiyor.
-            </video>
-          </div>
-          
-          <div className="text-center">
-            <a href="#urunler" className="btn btn-dark rounded-0 px-5 py-3 text-uppercase small" style={{ letterSpacing: '1px' }}>
-              {lang === 'tr' ? 'Koleksiyonu İncele' : 'View Collection'}
-            </a>
-          </div>
+      {/* SİNEMATİK TAM EKRAN VİDEO ALANI */}
+      {/* calc(100vh - 86px) değeri menü haricindeki tüm ekranı doldurmasını sağlar */}
+      <section className="position-relative w-100 p-0 m-0" style={{ height: 'calc(100vh - 86px)', overflow: 'hidden' }}>
+        
+        <video 
+          autoPlay 
+          muted 
+          playsInline 
+          /* loop yok, bitince son karede donacak */
+          className="w-100 h-100" 
+          style={{ objectFit: 'cover' }}
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+
+        {/* Butonu Videonun Alt Orta Kısmına Şık Bir Şekilde Yerleştirdik */}
+        <div className="position-absolute bottom-0 start-50 translate-middle-x mb-5 z-3">
+          <a href="#urunler" className="btn btn-light rounded-0 px-5 py-3 text-uppercase small shadow-lg" style={{ letterSpacing: '1px' }}>
+            {lang === 'tr' ? 'Koleksiyonu İncele' : 'View Collection'}
+          </a>
         </div>
+        
       </section>
 
       {/* Ürünler Vitrini */}
