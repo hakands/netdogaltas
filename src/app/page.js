@@ -7,25 +7,23 @@ export default function Home() {
   const products = [
     {
       id: 1,
-      category_tr: 'Klasik Traverten',
-      category_en: 'Classic Travertine',
-      title_tr: 'Ivory Light Traverten',
-      title_en: 'Ivory Light Travertine',
-      desc_tr: 'Açık tonları ile mekanlarınıza ferahlık katar.',
-      desc_en: 'Adds freshness to your spaces with its light tones.',
-      finishes_tr: 'Cilalı, Honlu, Eskitme',
-      finishes_en: 'Polished, Honed, Tumbled'
+      category_tr: 'Denizli Traverten',
+      category_en: 'Denizli Travertine',
+      title_tr: 'Ivory Denizli Traverten',
+      title_en: 'Ivory Denizli Travertine',
+      desc_tr: 'Light-Light mix-Tuscany-Mix-Classic Mix-Com',
+      desc_en: 'Light-Light mix-Tuscany-Mix-Classic Mix-Com',
+      finishes_tr: 'Honlu, Eskitme,Bullnose',
+      finishes_en: 'Honed,Polished, Bulnose'
     },
     {
       id: 2,
-      category_tr: 'Gümüş Traverten',
-      category_en: 'Silver Travertine',
-      title_tr: 'Silver Koyu Traverten',
-      title_en: 'Silver Dark Travertine',
-      desc_tr: 'Modern mimarinin vazgeçilmez gri tonları.',
-      desc_en: 'Indispensable gray tones of modern architecture.',
-      finishes_tr: 'Honlu, Fırçalı',
-      finishes_en: 'Honed, Brushed'
+      category_tr: 'Ivory-Denizli Traverten',
+      category_en: 'Ivory-Denizli Travertine',
+      title_tr: 'Valencia Picasso',
+      title_en: 'Valencia Picasso',
+      finishes_tr: 'Honlu, Dolgulu',
+      finishes_en: 'Honed, Filled'
     }
   ];
 
@@ -158,9 +156,10 @@ export default function Home() {
 
             <div className="col-lg-3 col-md-6">
               <h6 className="fw-bold mb-3">{lang === 'tr' ? 'İletişim Bilgileri' : 'Contact Info'}</h6>
-              <p className="text-muted small mb-2"><i className="bi bi-geo-alt me-2"></i> Denizli, Türkiye</p>
-              <p className="text-muted small mb-2"><i className="bi bi-telephone me-2"></i> +90 (5XX) XXX XX XX</p>
+              <p className="text-muted small mb-2"><i className="bi bi-geo-alt me-2"></i> Honaz Denizli Türkiye</p>
+              <p className="text-muted small mb-2"><i className="bi bi-telephone me-2"></i> +90 (533) 253 96 04</p>
               <p className="text-muted small mb-2"><i className="bi bi-envelope me-2"></i> info@netdogaltas.com</p>
+              <p className="text-muted small mb-2"><i className="bi bi-envelope me-2"></i> netdogaltas@gmail.com</p>
             </div>
 
             <div className="col-lg-4 col-md-12">
