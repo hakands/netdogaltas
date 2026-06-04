@@ -61,18 +61,28 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Büyük Hero Alanı (Giriş) */}
-      <section className="hero-section text-center py-5 bg-white">
-        <div className="container py-5 d-flex flex-column align-items-center justify-content-center">
-          
-          {/* Ortadaki görsel %50 oranında büyütüldü (maxHeight: 375px yapıldı) */}
-          <div className="mb-4 w-100 text-center">
-            <img src="/hero.png" alt="Doğanın Zarafeti" className="img-fluid mx-auto" style={{ maxHeight: '375px', objectFit: 'contain' }} />
-          </div>
+      {/* Büyük Hero Alanı (Giriş) - Çift Görselli Yapı */}
+      <section className="hero-section py-5 bg-white">
+        <div className="container py-5">
+          <div className="row align-items-center justify-content-center">
+            
+            {/* Sol Taraf: %30 Küçültülen İlk Görsel (Kenarlardan Pay Bırakıldı) */}
+            <div className="col-md-5 text-center text-md-end mb-4 mb-md-0 pe-md-4">
+              <img src="/hero.png" alt="Doğaltaş Görsel 1" className="img-fluid" style={{ maxHeight: '260px', objectFit: 'contain' }} />
+            </div>
 
-          <a href="#urunler" className="btn btn-dark rounded-0 px-4 py-2 text-uppercase small mt-2" style={{ letterSpacing: '1px' }}>
-            {lang === 'tr' ? 'Koleksiyonu İncele' : 'View Collection'}
-          </a>
+            {/* Sağ Taraf: Yeni Eklenecek İkinci Görsel */}
+            <div className="col-md-5 text-center text-md-start ps-md-4">
+              <img src="/hero2.png" alt="Doğaltaş Görsel 2" className="img-fluid" style={{ maxHeight: '260px', objectFit: 'contain' }} />
+            </div>
+
+          </div>
+          
+          <div className="text-center mt-5">
+            <a href="#urunler" className="btn btn-dark rounded-0 px-4 py-2 text-uppercase small" style={{ letterSpacing: '1px' }}>
+              {lang === 'tr' ? 'Koleksiyonu İncele' : 'View Collection'}
+            </a>
+          </div>
         </div>
       </section>
 
@@ -106,7 +116,6 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="mt-4">
-                    {/* Buton rengi btn-success (Yeşil) olarak güncellendi */}
                     <a 
                       href={
                         lang === 'tr' 
@@ -155,11 +164,17 @@ export default function Home() {
               <p className="text-muted small mb-2"><i className="bi bi-envelope me-2"></i> info@netdogaltas.com</p>
             </div>
 
+            {/* Yeni Eklenen Net Doğaltaş Google Haritalar Konumu */}
             <div className="col-lg-4 col-md-12">
               <h6 className="fw-bold mb-3">{lang === 'tr' ? 'Konumumuz' : 'Our Location'}</h6>
               <div className="ratio ratio-4x3 rounded shadow-sm overflow-hidden" style={{ maxHeight: '150px' }}>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100868.91924683076!2d29.025219515037996!3d37.77195431872132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c711fa7a4e6bd5%3A0x67dbbdc80330dc37!2sDenizli!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" 
-                  style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.1007230720256!2d29.321604299999997!3d37.8345278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c71b051c01be4b%3A0x2e363493630be7a1!2zTmV0IERvxJ9hbHRhxZ8gxLDDpyB2ZSBExLHFnyB0aWMgTHRkIMWedGk!5e0!3m2!1str!2str!4v1780592867253!5m2!1str!2str" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade">
+                </iframe>
               </div>
             </div>
 
