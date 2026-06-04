@@ -2,10 +2,8 @@
 import { useState } from 'react';
 
 export default function Home() {
-  // Sitenin Dil Durumunu Tutan Değişken
   const [lang, setLang] = useState('tr');
 
-  // Veritabanı yerine kullanacağımız ürün listemiz (İstediğin kadar ekleyebilirsin)
   const products = [
     {
       id: 1,
@@ -36,7 +34,11 @@ export default function Home() {
       {/* Üst Menü / Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top border-bottom">
         <div className="container">
-          <a className="navbar-brand fw-bold tracking-widest" href="#" style={{ letterSpacing: '2px' }}>NET DOĞALTAŞ</a>
+          {/* LOGO GÖRSELİ BURAYA EKLENDİ (Yazı Silindi) */}
+          <a className="navbar-brand" href="#">
+            <img src="/logo.png" alt="Net Doğaltaş Logo" height="50" style={{ objectFit: 'contain' }} />
+          </a>
+          
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -51,7 +53,6 @@ export default function Home() {
               <li className="nav-item">
                 <a className="nav-link" href="#iletisim">{lang === 'tr' ? 'İletişim' : 'Contact'}</a>
               </li>
-              {/* TR/EN Dil Seçenekleri Butonları */}
               <li className="nav-item ms-lg-3 border-start ps-lg-3 mt-2 mt-lg-0">
                 <button onClick={() => setLang('tr')} className={`btn btn-sm me-1 ${lang === 'tr' ? 'btn-dark' : 'btn-outline-dark'}`}>TR</button>
                 <button onClick={() => setLang('en')} className={`btn btn-sm ${lang === 'en' ? 'btn-dark' : 'btn-outline-dark'}`}>EN</button>
@@ -64,13 +65,13 @@ export default function Home() {
       {/* Büyük Hero Alanı (Giriş) */}
       <section className="hero-section text-center py-5 bg-light">
         <div className="container py-5">
-          <h1 className="display-3 fw-light tracking-wide mb-3">
-            {lang === 'tr' ? 'Doğanın Zarafeti' : 'Elegance of Nature'}
-          </h1>
-          <p className="lead fw-light mb-4">
-            {lang === 'tr' ? 'Mekanlarınıza değer katan premium traverten koleksiyonları.' : 'Premium travertine collections that add value to your spaces.'}
-          </p>
-          <a href="#urunler" className="btn btn-dark rounded-0 px-4 py-2 text-uppercase small" style={{ letterSpacing: '1px' }}>
+          
+          {/* DOĞANIN ZARAFETİ YAZISI SİLİNDİ, YERİNE GÖRSEL EKLENDİ */}
+          <div className="mb-4">
+            <img src="/hero.png" alt="Doğanın Zarafeti" className="img-fluid" style={{ maxHeight: '250px', objectFit: 'contain' }} />
+          </div>
+
+          <a href="#urunler" className="btn btn-dark rounded-0 px-4 py-2 text-uppercase small mt-3" style={{ letterSpacing: '1px' }}>
             {lang === 'tr' ? 'Koleksiyonu İncele' : 'View Collection'}
           </a>
         </div>
@@ -153,9 +154,8 @@ export default function Home() {
             <div className="col-lg-3 col-md-6">
               <h6 className="fw-bold mb-3">{lang === 'tr' ? 'İletişim Bilgileri' : 'Contact Info'}</h6>
               <p className="text-muted small mb-2"><i className="bi bi-geo-alt me-2"></i> Denizli, Türkiye</p>
-              <p className="text-muted small mb-2"><i className="bi bi-telephone me-2"></i> +90 (533)253 96 04</p>
+              <p className="text-muted small mb-2"><i className="bi bi-telephone me-2"></i> +90 (5XX) XXX XX XX</p>
               <p className="text-muted small mb-2"><i className="bi bi-envelope me-2"></i> info@netdogaltas.com</p>
-               <p className="text-muted small mb-2"><i className="bi bi-envelope me-2"></i> netdogaltas@gmail.com</p>
             </div>
 
             {/* Google Haritalar */}
