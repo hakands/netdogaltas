@@ -3,12 +3,13 @@ body {
     background-color: #fcfbf9; 
     color: #2b2b2b; 
 }
+/* Arkadaki görsel kaldırıldı, arka plan tamamen beyaz yapıldı ve dikey olarak ortalandı */
 .hero-section { 
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') center/cover; 
-    height: 60vh; 
+    background-color: #ffffff; 
+    min-height: 50vh; 
     display: flex; 
     align-items: center; 
-    color: white; 
+    justify-content: center; 
 }
 .product-card { border: none; border-radius: 0; background-color: #fff; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
