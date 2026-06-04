@@ -61,35 +61,26 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Büyük Hero Alanı (Giriş) - Yarı Yarıya Simetrik Tasarım */}
+      {/* Büyük Hero Alanı (Giriş) - Ortalanmış Video */}
       <section className="hero-section py-5 bg-white">
-        <div className="container py-4">
-          {/* g-5 class'ı aralarındaki o ferah boşluğu (mesafeyi) sağlar */}
-          <div className="row g-4 g-lg-5 align-items-center">
-            
-            {/* Sol Taraf: Yüzde 50 Alan */}
-            <div className="col-md-6">
-              <img 
-                src="/hero.png" 
-                alt="Doğaltaş Görsel 1" 
-                className="img-fluid w-100 rounded-1 shadow-sm" 
-                style={{ height: '400px', objectFit: 'cover' }} 
-              />
-            </div>
-
-            {/* Sağ Taraf: Yüzde 50 Alan */}
-            <div className="col-md-6">
-              <img 
-                src="/hero2.png" 
-                alt="Doğaltaş Görsel 2" 
-                className="img-fluid w-100 rounded-1 shadow-sm" 
-                style={{ height: '400px', objectFit: 'cover' }} 
-              />
-            </div>
-
+        <div className="container py-4 d-flex flex-column align-items-center justify-content-center">
+          
+          {/* Video Alanı */}
+          <div className="w-100 text-center mb-5">
+            <video 
+              autoPlay 
+              muted 
+              playsInline 
+              /* loop özelliği bilerek eklenmedi ki bitince son karesinde donsun */
+              className="w-100 rounded-3 shadow-lg" 
+              style={{ maxWidth: '1000px', maxHeight: '500px', objectFit: 'cover' }}
+            >
+              <source src="/hero-video.mp4" type="video/mp4" />
+              Tarayıcınız video oynatmayı desteklemiyor.
+            </video>
           </div>
           
-          <div className="text-center mt-5">
+          <div className="text-center">
             <a href="#urunler" className="btn btn-dark rounded-0 px-5 py-3 text-uppercase small" style={{ letterSpacing: '1px' }}>
               {lang === 'tr' ? 'Koleksiyonu İncele' : 'View Collection'}
             </a>
