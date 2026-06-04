@@ -61,25 +61,36 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Büyük Hero Alanı (Giriş) - Çift Görselli Yapı */}
+      {/* Büyük Hero Alanı (Giriş) - Yarı Yarıya Simetrik Tasarım */}
       <section className="hero-section py-5 bg-white">
-        <div className="container py-5">
-          <div className="row align-items-center justify-content-center">
+        <div className="container py-4">
+          {/* g-5 class'ı aralarındaki o ferah boşluğu (mesafeyi) sağlar */}
+          <div className="row g-4 g-lg-5 align-items-center">
             
-            {/* Sol Taraf: %30 Küçültülen İlk Görsel (Kenarlardan Pay Bırakıldı) */}
-            <div className="col-md-5 text-center text-md-end mb-4 mb-md-0 pe-md-4">
-              <img src="/hero.png" alt="Doğaltaş Görsel 1" className="img-fluid" style={{ maxHeight: '260px', objectFit: 'contain' }} />
+            {/* Sol Taraf: Yüzde 50 Alan */}
+            <div className="col-md-6">
+              <img 
+                src="/hero.png" 
+                alt="Doğaltaş Görsel 1" 
+                className="img-fluid w-100 rounded-1 shadow-sm" 
+                style={{ height: '400px', objectFit: 'cover' }} 
+              />
             </div>
 
-            {/* Sağ Taraf: Yeni Eklenecek İkinci Görsel */}
-            <div className="col-md-5 text-center text-md-start ps-md-4">
-              <img src="/hero2.png" alt="Doğaltaş Görsel 2" className="img-fluid" style={{ maxHeight: '260px', objectFit: 'contain' }} />
+            {/* Sağ Taraf: Yüzde 50 Alan */}
+            <div className="col-md-6">
+              <img 
+                src="/hero2.png" 
+                alt="Doğaltaş Görsel 2" 
+                className="img-fluid w-100 rounded-1 shadow-sm" 
+                style={{ height: '400px', objectFit: 'cover' }} 
+              />
             </div>
 
           </div>
           
           <div className="text-center mt-5">
-            <a href="#urunler" className="btn btn-dark rounded-0 px-4 py-2 text-uppercase small" style={{ letterSpacing: '1px' }}>
+            <a href="#urunler" className="btn btn-dark rounded-0 px-5 py-3 text-uppercase small" style={{ letterSpacing: '1px' }}>
               {lang === 'tr' ? 'Koleksiyonu İncele' : 'View Collection'}
             </a>
           </div>
@@ -164,7 +175,6 @@ export default function Home() {
               <p className="text-muted small mb-2"><i className="bi bi-envelope me-2"></i> info@netdogaltas.com</p>
             </div>
 
-            {/* Yeni Eklenen Net Doğaltaş Google Haritalar Konumu */}
             <div className="col-lg-4 col-md-12">
               <h6 className="fw-bold mb-3">{lang === 'tr' ? 'Konumumuz' : 'Our Location'}</h6>
               <div className="ratio ratio-4x3 rounded shadow-sm overflow-hidden" style={{ maxHeight: '150px' }}>
